@@ -1,2 +1,6 @@
 # website-status-checker
-Script permettant de vérifier si un site ne retourne pas de code HTTP 200 afin de prévenir l'administrateur du serveur
+Ce script permet de vérifier si un site ne retourne pas de code HTTP 200 afin de prévenir l'administrateur du serveur
+
+## Est-ce qu'il faut installer autre chose ?
+Oui, l'utilisation de ce script nécessite d'avoir installé au préalable le paquet "swaks". Sous Debian cela peut se faire via la commande : 
+`sudo apt-get install -y swaks`
