@@ -6,11 +6,11 @@ EMAILPASSWORD=""
 MAILSERVER=""
 
 # URL du site à vérifier
-WEBSITE="https://acinonyxweb.agency"
+WEBSITE="https://www.mon-site.fr"
 
 # Vérification du statut d'un site, à dupliquer en remplaçant la variable si nécessaire pour vérifier plusieurs sites
-if curl -s --head  --request GET $WEBSITE | grep "200" > /dev/null; then
-    # Ne rien faire si le site est UP (HTTP 200)
+if curl -s --head  --request GET $WEBSITE | grep -w "200\|301" > /dev/null; then
+    # Ne rien faire si le site est UP (HTTP 200/301)
     echo "OK"
 else
     # Envoyer un mail régulièrement tant que le site est down
